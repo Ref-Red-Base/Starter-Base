@@ -1,0 +1,146 @@
+/* =================================== */
+/*             PAGE BASE               */
+/* =================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+/* Core sizes */
+
+:root {
+    --size-01: 0.25rem;
+    --size-02: 0.5rem;
+    --size-03: 0.75rem;
+    --size-04: 1rem;
+    --size-05: 1.5rem;
+    --size-06: 2rem;
+    --size-07: 3rem;
+    --size-08: 4rem;
+    --size-09: 5rem;
+}
+
+
+/* =================================== */
+/*       NAVIGATION - DESKTOP          */
+/* =================================== */
+
+.primary-header {
+    position: relative;
+    z-index: 1000;
+    padding: var(--size-04);
+    background: #fff;
+    box-shadow: 0 4px 2px -2px rgb(0, 0, 0, 0.15);
+}
+
+.container {
+    --max-width: 1110px;
+    --padding: var(--size-04);
+
+    width: min(var(--max-width), 100% - (var(--padding) * 2));
+    margin-inline: auto;
+}
+
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+    height: 30px;
+}
+
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    font-size: var(--size-04);
+    display: flex;
+    gap: clamp(var(--size-01), 5vw, var(--size-06));
+}
+
+.nav-list a {
+    color: #000;
+    text-decoration: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px; 
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; 
+    border: 0;
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+/* =================================== */
+/*         NAVIGATION - MOBILE         */
+/* =================================== */
+
+@media (max-width: 50em) {
+    .primary-navigation {
+        position: fixed;
+        padding: var(--size-06);
+        inset: var(--size-09) var(--size-04) auto;
+        top: var(--size-08);
+        border-radius: var(--size-01);
+        box-shadow: 0 4px 2px -2px rgb(0, 0, 0, 0.15);
+        transform: translateY(-150%);
+        transition: 500ms ease;
+        margin-left: -1rem;
+        width: 100%;  
+    }
+
+    .nav-list {
+        display: grid;
+        gap: var(--size-05);
+        text-align: center;
+        font-weight: 700;   
+    }
+
+    .primary-navigation[data-visible] {
+        position: fixed;
+        transform: translateY(0%);
+        transition: 500ms ease;
+        background: #fff;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        cursor: pointer;
+        background: transparent;
+        border: 0;
+        padding: var(--size-02);
+    }
+
+    .inactive {
+        display: none;
+    }
+
+    .active {
+        display: block;
+    }
+}
