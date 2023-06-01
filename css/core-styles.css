@@ -34,6 +34,8 @@ body {
 /*       NAVIGATION - DESKTOP          */
 /* =================================== */
 
+/* HEADER */
+
 .primary-header {
     position: relative;
     z-index: 1000;
@@ -50,9 +52,9 @@ body {
     margin-inline: auto;
 }
 
-img,
-picture,
-svg {
+header img,
+header picture,
+header svg {
     max-width: 100%;
     display: block;
     height: 30px;
@@ -85,10 +87,10 @@ ol[role="list"] {
     width: 1px;
     height: 1px;
     padding: 0;
-    margin: -1px; 
+    margin: -1px;
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
-    white-space: nowrap; 
+    white-space: nowrap;
     border: 0;
 }
 
@@ -96,6 +98,69 @@ ol[role="list"] {
     display: none;
 }
 
+/* FOOTER */
+
+footer img,
+footer picture,
+footer svg {
+    display: block;
+    width: 100%;
+    height: 60px;
+}
+
+.footer {
+    position: relative;
+    padding-top: var(--size-06);
+    padding-bottom: var(--size-06);
+    background: #f8f7f7;
+}
+
+.footer .nav-list{
+    gap: clamp(var(--size-01), 5vw, var(--size-09));   
+}
+
+.contact-group {
+    text-align: center;
+    margin-top: var(--size-06);
+    margin-bottom: var(--size-06);
+    line-height: var(--size-06);
+}
+
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.credit,
+.copy {
+    text-align: center;
+    display: block;
+    margin-top: 35px;
+}
+
+.contact-group span,
+.contact-group a {
+    display: block;
+}
+
+.copy {
+    margin-top: 0;
+}
+
+.container-review{
+    display: flex;
+    
+}
+.review-card{
+    border: 1px solid red;
+}
+
+.cta .container{
+    display: flex;
+    justify-content: space-between;
+}
 /* =================================== */
 /*         NAVIGATION - MOBILE         */
 /* =================================== */
@@ -111,14 +176,14 @@ ol[role="list"] {
         transform: translateY(-150%);
         transition: 500ms ease;
         margin-left: -1rem;
-        width: 100%;  
+        width: 100%;
     }
 
     .nav-list {
         display: grid;
         gap: var(--size-05);
         text-align: center;
-        font-weight: 700;   
+        font-weight: 700;
     }
 
     .primary-navigation[data-visible] {
