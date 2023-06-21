@@ -9,7 +9,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/css/core-styles.css">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Document</title>
+    <title>Base</title>
 </head>
 
 <body>
@@ -27,11 +27,11 @@
                 <nav class='primary-navigation' id='primary-navigation'>
                     <ul aria-label='primary' role='list' class="nav-list">
                         <li><a class="active-menu" href="index.html">Home</a></li>
-                        <li><a href="index.html#about">About</a></li>
-                        <li><a href="index.html#services">Services</a></li>
-                        <li><a href="html/portfolio.html">Portfolio</a></li>
-                        <li><a href="html/testimonials.html">Testimonials</a></li>
-                        <li><a href="html/contact.html">Contact</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -42,15 +42,18 @@
         <!-- ==         HERO SECTION         == -->
         <!-- ================================== -->
         <section class='hero'>
-            <div class='heroText'>
-                <h1 id='heroH'>Welcome Message, mention the name of the business</h1>
-            </div>
-            <button class='cta-button'>Main call to action</button>
-            <picture>
+            <div class='container'>
+                <div class='heroText'>
+                    <p>Welcome to</p>
+                    <h1 id='heroH'>Salon 77</h1>
+                </div>
+                <button class='cta-button'>Main call to action</button>
+                <!-- <picture>
                 <source media="(max-width: 600px)" srcset="/images/home/landing-m.jpg">
                 <source media="(min-width: 601px)" srcset="/images/home/landing-l.jpg">
-                <img aria-hidden="true" decoding="async" src="/images/home/landing-l.jpg" alt="new home" width="1000">
-            </picture>
+                <img aria-hidden="true" decoding="async" src="/images/home/landing-l.jpg" alt="new home">
+            </picture> -->
+            </div>
         </section>
         <!-- ================================== -->
         <!-- ==       SERVICES SECTION       == -->
@@ -58,30 +61,33 @@
         <section class='services'>
             <div class='container'>
                 <div class='row'>
-                    <picture>
-                        <source media="(max-width: 600px)" srcset="/images/home/serv1-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/images/home/serv1-l.jpg">
-                        <img aria-hidden="true" decoding="async" src="/images/home/serv1-l.jpg" alt="new home"
-                            width="500">
-                    </picture>
-                    <picture>
-                        <source media="(max-width: 600px)" srcset="/images/home/serv2-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/images/home/serv2-l.jpg">
-                        <img aria-hidden="true" decoding="async" src="/images/home/serv2-l.jpg" alt="new home"
-                            width="500">
-                    </picture>
-                    <picture>
-                        <source media="(max-width: 600px)" srcset="/images/home/serv3-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/images/home/serv3-l.jpg">
-                        <img aria-hidden="true" decoding="async" src="/images/home/serv3-l.jpg" alt="new home"
-                            width="500">
-                    </picture>
-                    <picture>
-                        <source media="(max-width: 600px)" srcset="/images/home/serv4-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/images/home/serv4-l.jpg">
-                        <img aria-hidden="true" decoding="async" src="/images/home/serv4-l.jpg" alt="new home"
-                            width="500">
-                    </picture>
+                    <div class='card'>
+                        <picture>
+                            <source media="(max-width: 600px)" srcset="/images/home/serv2-m.jpg">
+                            <source media="(min-width: 601px)" srcset="/images/home/serv2-l.jpg">
+                            <img aria-hidden="true" decoding="async" src="/images/home/serv2-l.jpg" alt="new home"
+                                width="">
+                        </picture>
+                        <div class='serviceText'>Service</div>
+                    </div>
+                    <div class='card'>
+                        <picture>
+                            <source media="(max-width: 600px)" srcset="/images/home/serv3-m.jpg">
+                            <source media="(min-width: 601px)" srcset="/images/home/serv3-l.jpg">
+                            <img aria-hidden="true" decoding="async" src="/images/home/serv3-l.jpg" alt="new home"
+                                width="">
+                        </picture>
+                        <div class='serviceText'>Service</div>
+                    </div>
+                    <div class='card'>
+                        <picture>
+                            <source media="(max-width: 600px)" srcset="/images/home/serv4-m.jpg">
+                            <source media="(min-width: 601px)" srcset="/images/home/serv4-l.jpg">
+                            <img aria-hidden="true" decoding="async" src="/images/home/serv4-l.jpg" alt="new home"
+                                width="">
+                        </picture>
+                        <div class='serviceText'>Service</div>
+                    </div>
                 </div>
             </div>
             <button class='cta-button'>View services</button>
@@ -92,12 +98,20 @@
         <section class='about row'>
             <div class='container'>
                 <div class='about-content'>
-                    <h2 class='hTitle'>Dedicated to crafting the perfect client experience</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo optio numquam error
-                        similique non eveniet quod pariatur? Maiores, sed.</p>
+                    <h2 class='hTitle'>Dedicated To Crafting the Perfect Client Experience</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis voluptatem culpa voluptatibus
+                        facilis iusto vel suscipit dolorum voluptates, deserunt expedita.</p>
+                    <button class='cta-button'>More about us</button>
+                </div>
+                <div class='about-img'>
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="/images/home/about.jpg">
+                        <source media="(min-width: 601px)" srcset="/images/home/about.jpg">
+                        <img aria-hidden="true" decoding="async" src="/images/home/about.jpg" alt="new home" width="">
+                    </picture>
                 </div>
             </div>
-            <button class='cta-button'>More about us</button>
+
         </section>
         <!-- ================================== -->
         <!-- ==       GALLERY SECTION        == -->
@@ -108,26 +122,22 @@
                     <picture>
                         <source media="(max-width: 600px)" srcset="/images/home/serv1-m.jpg">
                         <source media="(min-width: 601px)" srcset="/images/home/serv1-l.jpg">
-                        <img aria-hidden="true" decoding="async" src="/images/home/serv1-l.jpg" alt="new home"
-                            width="500">
+                        <img aria-hidden="true" decoding="async" src="/images/home/serv1-l.jpg" alt="new home" width="">
                     </picture>
                     <picture>
                         <source media="(max-width: 600px)" srcset="/images/home/serv2-m.jpg">
                         <source media="(min-width: 601px)" srcset="/images/home/serv2-l.jpg">
-                        <img aria-hidden="true" decoding="async" src="/images/home/serv2-l.jpg" alt="new home"
-                            width="500">
+                        <img aria-hidden="true" decoding="async" src="/images/home/serv2-l.jpg" alt="new home" width="">
                     </picture>
                     <picture>
                         <source media="(max-width: 600px)" srcset="/images/home/serv3-m.jpg">
                         <source media="(min-width: 601px)" srcset="/images/home/serv3-l.jpg">
-                        <img aria-hidden="true" decoding="async" src="/images/home/serv3-l.jpg" alt="new home"
-                            width="500">
+                        <img aria-hidden="true" decoding="async" src="/images/home/serv3-l.jpg" alt="new home" width="">
                     </picture>
                     <picture>
                         <source media="(max-width: 600px)" srcset="/images/home/serv4-m.jpg">
                         <source media="(min-width: 601px)" srcset="/images/home/serv4-l.jpg">
-                        <img aria-hidden="true" decoding="async" src="/images/home/serv4-l.jpg" alt="new home"
-                            width="500">
+                        <img aria-hidden="true" decoding="async" src="/images/home/serv4-l.jpg" alt="new home" width="">
                     </picture>
                 </div>
             </div>
@@ -137,78 +147,79 @@
         <!-- ==       TESTIMONIAL SECTION       == -->
         <!-- ===================================== -->
         <section class='testimonials'>
-            <div class='container container-review'>
+            <div class='container'>
+                <!-- <div class='row'> -->
                 <div class='review-card'>
                     <picture>
-                        <img class="profile" loading="lazy" decoding="async" src="/images/profile-circle.svg" alt="" width="99"
-                            height="99">
+                        <img class="profile" loading="lazy" decoding="async" src="/images/profile-circle.svg" alt=""
+                            width="99" height="99">
                     </picture>
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed recusandae rerum unde similique
                         ratione sapiente necessitatibus natus mollitia nam iusto.
                     </p>
                     <div class="reviewer">
-                        <span class="name">B Miller<span class="desc">Homeowner</span></span>
+                        <span class="name">B Miller</span>
                     </div>
                 </div>
                 <div class='review-card'>
                     <picture>
-                        <img class="profile" loading="lazy" decoding="async" src="/images/profile-circle.svg" alt="" width="99"
-                            height="99">
+                        <img class="profile" loading="lazy" decoding="async" src="/images/profile-circle.svg" alt=""
+                            width="99" height="99">
                     </picture>
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed recusandae rerum unde similique
                         ratione sapiente necessitatibus natus mollitia nam iusto.
                     </p>
                     <div class="reviewer">
-                        <span class="name">B Miller<span class="desc">Homeowner</span></span>
+                        <span class="name">B Miller</span>
                     </div>
                 </div>
                 <div class='review-card'>
                     <picture>
-                        <img class="profile" loading="lazy" decoding="async" src="/images/profile-circle.svg" alt="" width="99"
-                            height="99">
+                        <img class="profile" loading="lazy" decoding="async" src="/images/profile-circle.svg" alt=""
+                            width="99" height="99">
+                    </picture>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quasi commodi culpa impedit doloribus facilis, quidem saepe accusamus nisi eum quibusdam aspernatur illum nihil libero nobis facere quia repella. 
+                    </p>
+                    <div class="reviewer">
+                        <span class="name">B Miller</span>
+                    </div>
+                </div>
+                <div class='review-card'>
+                    <picture>
+                        <img class="profile" loading="lazy" decoding="async" src="/images/profile-circle.svg" alt=""
+                            width="99" height="99">
                     </picture>
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed recusandae rerum unde similique
                         ratione sapiente necessitatibus natus mollitia nam iusto.
                     </p>
                     <div class="reviewer">
-                        <span class="name">B Miller<span class="desc">Homeowner</span></span>
+                        <span class="name">B Miller</span>
                     </div>
                 </div>
-                <div class='review-card'>
-                    <picture>
-                        <img class="profile" loading="lazy" decoding="async" src="/images/profile-circle.svg" alt="" width="99"
-                            height="99">
-                    </picture>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed recusandae rerum unde similique
-                        ratione sapiente necessitatibus natus mollitia nam iusto.
-                    </p>
-                    <div class="reviewer">
-                        <span class="name">B Miller<span class="desc">Homeowner</span></span>
-                    </div>
-                </div>
+            <!-- </div> -->
             </div>
             <button class='cta-button'>More testimonials</button>
         </section>
-    <!-- ==================================== -->
-    <!-- ==       FINAL CTA SECTION        == -->
-    <!-- ==================================== -->
-<section class='cta'>
-    <div class='container'>
-        <div class='cta-left'>
-        <h2 class='hTitle'>Let us take care of your hair</h2>
-        <button class='cta-button'>Book Appointment</button>
-    </div>
-    <div class='cta-right'>
-        <span>Hours</span>
-        <p>Monday-Friday: 9am-7pm</p>
-        <p>Saturday-Sunday: 11am-5pm</p>
-    </div>
-    </div>
-</section>
+        <!-- ==================================== -->
+        <!-- ==       FINAL CTA SECTION        == -->
+        <!-- ==================================== -->
+        <section class='cta'>
+            <div class='container'>
+                <div class='cta-left'>
+                    <h2 class='hTitle'>Let Us Take Care Of Your Hair</h2>
+                    <button class='cta-button'>Book Appointment</button>
+                </div>
+                <div class='cta-right'>
+                    <span>Hours</span>
+                    <p>Monday-Friday: 9am-7pm</p>
+                    <p>Saturday-Sunday: 11am-5pm</p>
+                </div>
+            </div>
+        </section>
 
     </main>
     <!-- ================================== -->

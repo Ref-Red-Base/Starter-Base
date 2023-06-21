@@ -12,7 +12,11 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: system-ui, sans-serif;
+    display: grid;
+    min-height: 100vh;
+    min-height: 100dvh;
+    grid-template-rows: auto 1fr auto;
 }
 
 /* Core sizes */
@@ -29,6 +33,24 @@ body {
     --size-09: 5rem;
 }
 
+/* Button styling */
+
+.cta-button, .contact-submit {
+    font-size: var(--size-04);
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: var(--size-05);
+    background: #fff;
+    border: 1px solid;
+    border-radius: var(--size-01);
+    transition: .3s;
+}
+
+.cta-button:hover {
+    background-color: #000;
+    color: #fff;
+    transition: .3s;
+}
 
 /* =================================== */
 /*       NAVIGATION - DESKTOP          */
@@ -40,11 +62,14 @@ body {
     position: relative;
     z-index: 1000;
     padding: var(--size-04);
-    background: #fff;
+    background: #F8CDCD;
     box-shadow: 0 4px 2px -2px rgb(0, 0, 0, 0.15);
 }
 
-.container {
+.primary-header .container,
+.hero .container,
+.about .container,
+.contact-page .container {
     --max-width: 1110px;
     --padding: var(--size-04);
 
@@ -109,14 +134,18 @@ footer svg {
 }
 
 .footer {
-    position: relative;
+    /* position: relative; */
+
+    bottom: 0;
+    width: 100%;
     padding-top: var(--size-06);
     padding-bottom: var(--size-06);
-    background: #f8f7f7;
+    background: #F8CDCD;
 }
 
-.footer .nav-list{
-    gap: clamp(var(--size-01), 5vw, var(--size-09));   
+.footer .nav-list {
+    gap: clamp(var(--size-01), 5vw, var(--size-09));
+
 }
 
 .contact-group {
@@ -149,23 +178,276 @@ footer svg {
     margin-top: 0;
 }
 
-.container-review{
-    display: flex;
-    
-}
-.review-card{
-    border: 1px solid red;
+
+
+
+
+/* =================================== */
+/*                HERO                 */
+/* =================================== */
+
+.hero {
+    position: relative;
+    background-image: url('../images/home/landing-l.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #000;
+    color: white;
+    padding-top: 20rem;
+    padding-bottom: 20rem;
+    width: 100%;
+    z-index: 7;
 }
 
-.cta .container{
-    display: flex;
-    justify-content: space-between;
+.hero::before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    opacity: .35;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
+
+.hero .container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    text-align: left;
+}
+
+.heroText {
+    padding-bottom: 2rem;
+}
+
+#heroH {
+    font-size: min(12vw, var(--size-09));
+    font-weight: 700;
+}
+
 /* =================================== */
-/*         NAVIGATION - MOBILE         */
+/*              SERVICES               */
 /* =================================== */
+
+.services {
+    padding: var(--size-09);
+    text-align: center;
+}
+
+.services .row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--size-01);
+
+    /* width: 100%; */
+    margin-bottom: var(--size-07);
+}
+
+.card {
+    border-radius: var(--size-02);
+    width: 30%;
+}
+
+.services .container {
+    max-width: 78vw;
+    margin: auto;
+    padding-top: var(--size-06);
+}
+
+.services .container img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.serviceText {
+    text-align: center;
+    padding: var(--size-05);
+    font-size: var(--size-05);
+    border-radius: 0 0 var(--size-02) var(--size-02);
+    border: 1px solid #d8d8d8;
+    text-transform: uppercase;
+}
+
+
+/* =================================== */
+/*              ABOUT US               */
+/* =================================== */
+
+.about {
+    padding: var(--size-09);
+    background: #F8CDCD;
+}
+
+.about .container {
+    display: flex;
+    gap: var(--size-04);
+}
+
+.about-img img {
+    width: 20vw;
+    display: block;
+    box-shadow: 0 4px 2px -2px rgb(0, 0, 0, 0.15);
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-content .cta-button {
+    align-self: flex-start;
+}
+
+.hTitle {
+    font-size: var(--size-07);
+    font-weight: 600;
+}
+
+.about-content p {
+    font-size: var(--size-05);
+    line-height: 2;
+}
+
+.hTitle,
+.about-content p {
+    margin-bottom: var(--size-07);
+
+}
+
+/* ================================== */
+/*              GALLERY               */
+/* ================================== */
+
+.gallery {
+    padding: var(--size-09);
+    text-align: center;
+}
+
+.gallery .row {
+    display: flex;
+    justify-content: center;
+    gap: var(--size-01);
+    margin-bottom: var(--size-07);
+
+}
+
+.gallery .container img {
+    display: block;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 100%;
+}
+
+
+/* ======================================= */
+/*              TESTIMONIALS               */
+/* ======================================= */
+
+.testimonials {
+    padding: var(--size-09);
+    text-align: center;
+    background: #F8CDCD;
+
+}
+
+.testimonials .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--size-05);
+    justify-content: center;
+    margin-bottom: var(--size-07);
+
+}
+
+.review-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 30rem;
+    padding: var(--size-06);
+    box-shadow: 0 4px 2px -2px rgb(0, 0, 0, 0.15);
+    border: 1px solid #d8d8d8;
+    width: 100%;
+    text-align: left;
+    border-radius: 0.3125em;
+    position: relative;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-card p {
+    font-size: var(--size-05);
+    margin-bottom: var(--size-05);
+}
+
+.reviewer {
+    border-top: 1px solid #dfdddd;
+    padding-top: var(--size-06);
+    margin-top: auto;
+    font-size: var(--size-05);
+}
+
+.reviewer span {
+    display: block;
+
+}
+
+.name {
+    font-weight: 700;
+}
+
+/* ========================================= */
+/*              CALL TO ACTION               */
+/* ========================================= */
+
+.cta {
+    padding: var(--size-09);
+}
+
+.cta .container {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid;
+    border-radius: var(--size-01);
+    width: 60vw;
+    padding: var(--size-09);
+    box-shadow: 0 4px 2px -2px rgb(0, 0, 0, 0.15);
+    margin: auto;
+}
+
+.cta-left {
+    max-width: 30rem;
+}
+
+.cta-right span {
+    display: block;
+    font-size: var(--size-06);
+    margin-bottom: var(--size-06);
+}
+
+.cta-right p {
+    font-size: var(--size-05);
+    line-height: 2;
+}
+
+/* ======================= */
+/*          MOBILE         */
+/* ======================= */
+
+
 
 @media (max-width: 50em) {
+
+    /* ==================================== */
+    /*          NAVIGATION - MOBILE         */
+    /* ==================================== */
     .primary-navigation {
         position: fixed;
         padding: var(--size-06);
@@ -207,5 +489,110 @@ footer svg {
 
     .active {
         display: block;
+    }
+
+    /* ============================== */
+    /*          HERO - MOBILE         */
+    /* ============================== */
+    .hero {
+        padding-top: 5.8rem;
+        padding-bottom: 5.8rem;
+    }
+
+    .hero .container {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    /* ================================== */
+    /*          SERVICES - MOBILE         */
+    /* ================================== */
+    .services {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .services .row {
+        flex-direction: column;
+        gap: var(--size-04);
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    /* =============================== */
+    /*          ABOUT - MOBILE         */
+    /* =============================== */
+
+    .about {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .about-img img {
+        display: none;
+    }
+
+    .about-content .cta-button {
+        align-self: center;
+    }
+
+    /* ================================= */
+    /*          GALLERY - MOBILE         */
+    /* ================================= */
+
+    .gallery {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .gallery .row {
+        flex-direction: column;
+        gap: var(--size-04);
+    }
+
+    /* ====================================== */
+    /*          TESTIMONIALS - MOBILE         */
+    /* ====================================== */
+
+    .testimonials {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .testimonials .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* ======================================== */
+    /*          CALL TO ACTION - MOBILE         */
+    /* ======================================== */
+    .cta {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .cta .container {
+        flex-direction: column;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100vw;
+    }
+
+    .cta-left {
+        margin: auto;
+        margin-bottom: var(--size-06);
+    }
+
+    .contact-page .container {
+        flex-direction: column;
+    }
+
+    .contact-left {
+        text-align: center;
     }
 }
